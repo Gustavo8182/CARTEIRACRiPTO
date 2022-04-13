@@ -1,0 +1,11 @@
+<div *ngIf="!addcripto">
+<label for="">
+  <input type="text" (keyup)="findByName($event)">
+  <button (click)="addCripto()">ADD</button>
+</label>
+<div >
+  <app-Wallet *ngFor="let item of filteredCriptos" [ele]="item"></app-Wallet>
+</div>
+<p *ngIf="filteredCriptos.length === 0 ">CRIPTO NÂO LOCALIZADA</p>
+</div>
+<app-walletForm *ngIf="addcripto"></app-walletForm>

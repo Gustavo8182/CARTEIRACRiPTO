@@ -1,0 +1,21 @@
+<div>
+  <form  [formGroup]="criptoForm">
+    <label >position
+    <input  formControlName="position" >
+    </label>
+
+    <label >position
+    <input formControlName="name" >
+    </label>
+
+    <label >weight
+    <input  formControlName="weight" >
+    </label>
+
+    <label >symbol
+    <input  formControlName="symbol" >
+    </label>
+
+    <input type="submit" value="Submit" (click)="onSubmit()">
+  </form>
+</div>

@@ -1,0 +1,29 @@
+<form   #loginForm="ngForm" *ngIf="!register" >
+  <label for="e-mail">Email
+    <input type="email" placeholder="Digite o Email" name="email" ngModel required>
+  </label>
+  <label for="passWord">Password
+    <input type="password" placeholder="Digite a senha" name="password"
+    ngModel required>
+  </label>
+  <p (click)="resetPassword()">Esqeuci a senha</p>
+  <p class="error" *ngIf="error">Usuário/senha inválidos, tente novamente!</p>
+  <button (click)="validateUser(loginForm)">LOGIN</button>
+  <button (click)="regis($event)">REGISTER</button>
+</form>
+
+<div *ngIf="register">
+  <app-loginForm></app-loginForm>
+</div>
+
+<div *ngIf="resetPass" >
+<form  #resetPassForm="ngForm">
+  <label for="resetPassword">
+    <input type="email" name="email" ngModel required>
+  </label>
+  <label for="resetPassword">
+    <input type="password" name="password" ngModel required>
+  </label>
+  <button (click)="validateUser(resetPassForm)">Salvar</button>
+</form>
+</div>

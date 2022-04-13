@@ -1,0 +1,12 @@
+<form [formGroup]="userForm" >
+  <label for="name">Nome
+    <input  formControlName="name" type="text">
+  </label>
+  <label for="passWord">Password
+    <input formControlName="password"  type="text">
+  </label>
+  <label for="e-mail">E-mail
+    <input formControlName="email" type="text">
+  </label>
+  <button (click)="onSubmit()">REGISTER</button>
+</form>
