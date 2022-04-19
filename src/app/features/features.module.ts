@@ -1,4 +1,3 @@
-import { CryptoPriceService } from './../shared/cryptoPrice.service';
 import { WalletFormComponent } from './Wallet/walletForm/walletForm.component';
 import { WalletService } from './Wallet/wallet.service';
 import { WalletPageComponent } from './Wallet/WalletPage/WalletPage.component';
@@ -59,8 +58,8 @@ import { SharedModule } from '../shared/shared.module';
   ],
   providers:[
     UserServiceService,
-    WalletService,
-    CryptoPriceService
+    WalletService
+
   ]
 })
 export class FeaturesModule { }

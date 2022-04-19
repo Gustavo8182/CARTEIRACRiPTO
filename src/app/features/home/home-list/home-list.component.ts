@@ -1,4 +1,3 @@
-import { CryptoPriceService } from './../../../shared/cryptoPrice.service';
 import { PeriodicElement } from './../model/cripto.model';
 import { HomeServiceService } from './../home-service.service';
 import { Component, OnInit } from '@angular/core';
@@ -17,8 +16,7 @@ export class HomeListComponent implements OnInit {
   cry:Array<string> = []
   teste:any;
 
-  constructor( private homeService :HomeServiceService,
-    private cryptoService:CryptoPriceService) {
+  constructor( private homeService :HomeServiceService) {
 
      }
 
@@ -34,15 +32,8 @@ export class HomeListComponent implements OnInit {
     return this.filteredCriptos = crtp;
   }
 
-  ///recebe um objeto e não consigo transforma em array.
-  getCryptos(){
-    this.cryptoService.getPriceAll().subscribe((data) =>{
-      console.log(data);
-  });
-}
-
   ngOnInit(): void {
-    this.getCryptos()
+
   }
 
 }

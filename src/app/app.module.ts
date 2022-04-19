@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { SharedModule } from './shared/shared.module';
-import { CryptoPriceService } from './shared/cryptoPrice.service';
+import { CryptoPriceService } from './shared/services/cryptoPrice.service';
 import { FeaturesModule } from './features/features.module';
 
 

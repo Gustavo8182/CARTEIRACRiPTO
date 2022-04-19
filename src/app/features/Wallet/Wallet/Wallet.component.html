@@ -1,16 +1,8 @@
 <table id="customers">
   <tr>
-    <th>position</th>
-    <th>name</th>
-    <th>weight</th>
-    <th>symbol</th>
-    <th>Deletar</th>
-    <th>Alterar</th>
-  </tr>
-  <tr>
     <td>{{ele?.position}}</td>
     <td>{{ele?.name}}</td>
-    <td>{{ele?.weight}}</td>
+    <td>{{ele?.weight | currency}}</td>
     <td>{{ele?.symbol}}</td>
     <td>X</td>
     <td>update</td>
