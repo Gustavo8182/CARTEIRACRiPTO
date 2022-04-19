@@ -30,7 +30,8 @@ export class LoginComponent implements OnInit {
       return this.error = true;
     }
     sessionStorage.setItem('user', JSON.stringify(student));
-    return this.router.navigateByUrl('home');
+    return this.router.navigateByUrl('wallet');
+    window.location.reload()
   }
   resetPassword(){
     this.resetPass = true;

@@ -1,20 +1,20 @@
 <div>
   <form  [formGroup]="criptoForm">
-    <label >position
-    <input  formControlName="position" >
-    </label>
+    <label >position </label>
+    <input type="text" id="fname"  formControlName="position" >
 
-    <label >position
-    <input formControlName="name" >
-    </label>
 
-    <label >Preço
-    <input  formControlName="weight" >
-    </label>
+    <label >position</label>
+    <input type="text" id="fname" formControlName="name" >
 
-    <label >symbol
-    <input  formControlName="symbol" >
-    </label>
+
+    <label >Preço</label>
+
+    <input type="text" id="fname" formControlName="weight" >
+
+    <label >symbol</label>
+    <input type="text" id="fname" formControlName="symbol" >
+
 
     <input type="submit" value="Submit" (click)="onSubmit()">
   </form>

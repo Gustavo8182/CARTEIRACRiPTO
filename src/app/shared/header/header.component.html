@@ -1,5 +1,6 @@
 <div class="topnav">
-  <a class="active" [routerLink]="['/login']">Login</a>
+  <a class="active" [routerLink]="['/login']"  *ngIf="!use" >Login</a>
   <a [routerLink]="['/wallet']" >Carteira</a>
   <a [routerLink]="['/home']">Home</a>
+  <a (click)="exit()" *ngIf="use">Sair</a>
 </div>

@@ -1,6 +1,10 @@
+<div>
 <form class="example-form">
-    <input (keyup)="findByName($event)">
+  <label for="fname">PROCURAR</label>
+    <input type="text" id="fname" name="firstname" placeholder="BTC"  (keyup)="findByName($event)">
 </form>
+</div>
+<div>
 <table id="customers">
   <tr>
     <th>Posição</th>
@@ -11,3 +15,4 @@
 <app-home-table  *ngFor="let item of filteredCriptos" [ele]="item" ></app-home-table>
 
 <p *ngIf="filteredCriptos.length === 0 ">CRIPTO NÂO LOCALIZADA</p>
+</div>

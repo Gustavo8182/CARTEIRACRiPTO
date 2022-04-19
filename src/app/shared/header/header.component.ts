@@ -1,4 +1,4 @@
-import { CryptoPriceService } from '../services/cryptoPrice.service';
+import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -8,12 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private criptoService: CryptoPriceService) { }
+  use: boolean = false;
+  constructor(private router : Router) { }
 
 
   ngOnInit(): void {
+    this.sessionUser()
   }
 
+  exit(){
+    sessionStorage.clear();
+    return this.router.navigateByUrl('home');
+    window.location.reload()
+  }
 
+  sessionUser(){
+      let ax = sessionStorage.length;
+      if (ax >= 1) {
+        this.use = true;
+      }
+      console.log("AQUI O USE "+ax+"aqui o bolean"+this.use);
+  }
 
 }

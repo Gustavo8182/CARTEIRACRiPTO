@@ -1,12 +1,15 @@
+<div>
+  <h1>Faça seu cadastro</h1>
 <form [formGroup]="userForm" >
-  <label for="name">Nome
-    <input  formControlName="name" type="text">
-  </label>
-  <label for="passWord">Password
-    <input formControlName="password"  type="text">
-  </label>
-  <label for="e-mail">E-mail
-    <input formControlName="email" type="text">
-  </label>
+  <label for="name">Nome</label>
+    <input type="text" id="fname" formControlName="name">
+
+  <label for="passWord">Password</label>
+    <input type="text" id="fname" formControlName="password"  >
+
+  <label for="e-mail">E-mail</label>
+    <input type="text" id="fname" formControlName="email" >
+
   <button (click)="onSubmit()">REGISTER</button>
 </form>
+</div>
